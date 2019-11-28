@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="back">
-      <router-link to="/"><img src="~@/assets/img/backhome.png" @click="test"></router-link>
+      <router-link to="/"><img src="~@/assets/img/backhome.png" @click="backToHome"></router-link>
     </div>
     <transition name="slide" mode="out-in">
       <router-view></router-view>
@@ -47,7 +47,7 @@
 
 
 <script>
-import mixinMethod_2 from '@/assets/script/page.js';
+import MixinPage from '@/assets/script/page_mixin.js';
 
 export default {
   props: ['fatherData'],
@@ -57,10 +57,6 @@ export default {
       showCircle: this.fatherData,
     }
   },
-  mixins: [mixinMethod_2],
+  mixins: [MixinPage]
 }
 </script>
-
-<style>
-
-</style>

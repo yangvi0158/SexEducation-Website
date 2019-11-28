@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -27,10 +26,6 @@ export default {
       detail: '男性生殖器大多位於體外。<br>包括陰莖、陰囊、尿道等；'
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-<style>
-
-</style> 

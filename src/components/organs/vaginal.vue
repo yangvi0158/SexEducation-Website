@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -27,10 +26,6 @@ export default {
       detail: '外生殖器由陰唇、陰蒂、尿口等組成。<br>內生殖器包括陰道、子宮、輸卵管和卵巢等等。'
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-
-<style>
-</style>

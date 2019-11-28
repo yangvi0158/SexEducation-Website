@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -27,11 +26,6 @@ export default {
       detail: '陰莖等雄性器官受刺激而興奮至極致時，使精液隨著生殖系統管道強烈收縮，並射出體外的過程。'
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-
-<style>
-
-</style>

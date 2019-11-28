@@ -16,9 +16,7 @@
 </template>
 
 <script>
-
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -28,11 +26,6 @@ export default {
       detail: '勃起狀態的陰莖跟陰道互相接合及在內磨擦的過程，主要目的是為了令自身獲得性快感、繁殖下一代。',
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo],
 }
 </script>
-
-
-<style>
-
-</style>

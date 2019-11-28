@@ -16,8 +16,7 @@
 </template>
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -27,12 +26,6 @@ export default {
       detail: '子宮內膜在卵巢激素作用下發生的週期性脫落及出血。<br>為女性性功能成熟的一項標記。',
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-
-
-<style>
-
-</style>

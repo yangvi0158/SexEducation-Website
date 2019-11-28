@@ -17,8 +17,7 @@
 
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -28,10 +27,6 @@ export default {
       detail: '雙方嘴唇的親密接觸，廣義則為口與何身體部位的接觸。接吻可表示親密或禮儀，也可以是含性意義的性行為。',
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-<style>
-
-</style>

@@ -26,7 +26,6 @@ export default {
       }
     }
   },
-
   beforeMount(){
     this.$nextTick(function(){
       window.addEventListener('load', this.getDistance);
@@ -82,8 +81,3 @@ export default {
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass">
-
-</style>

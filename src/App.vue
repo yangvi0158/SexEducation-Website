@@ -2,7 +2,7 @@
   <div id="app">
     <div class="main">
       <transition name="fade" mode="out-in">
-        <router-view @sayhi="getsayhi" @homecolor-changenav="changeNav" :father-data="showCircle"></router-view>
+        <router-view @sendtoAppVue="getfromPage" @homecolor-changenav="changeNav" :father-data="showCircle"></router-view>
       </transition>
     </div>
     <nav class="nav" :class="{'navclass':isPurpleBack,'navclass2':isBlackBack}">
@@ -23,13 +23,9 @@
 </template>
 
 <script>
-
-import '@/assets/css/app.sass'
-
+import '@/assets/css/app.sass';
 export default {
   name: 'App',
-  components: {
-  },
   data(){
     return{
       isPurpleBack: true,
@@ -43,12 +39,8 @@ export default {
       },
     }
   },
-  beforeMount(){
-     
-  },
   methods: {
-    getsayhi(){
-      console.log('2');
+    getfromPage(){
       this.navBtn.isNav1 = false;
       this.navBtn.isNav2 = false;
       this.navBtn.isNav3 = false;
@@ -73,9 +65,6 @@ export default {
     },
     navBtnColor(e){
       this.showCircle = 'pageItem1';
-      //let href = e.target.href;
-      //let url = 'https://viboloveyou12.github.io/1023test/dist/#/';
-      //console.log(href);
       let name = e.currentTarget.dataset.name;
       if(name === 'nav1'){
         this.isPurpleBack_btn = false;
@@ -108,6 +97,5 @@ export default {
       }
     },
   }
-
 }
 </script>

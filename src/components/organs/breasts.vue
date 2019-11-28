@@ -17,8 +17,7 @@
 
 
 <script>
-import mixinMethod from '@/assets/script/page_mixin.js';
-
+import mixinVideo from '@/assets/script/video_mixin.js';
 export default {
   data() {
     return {
@@ -28,11 +27,6 @@ export default {
       detail: '乳房主要由乳腺、脂肪、結締組織構成。<br>主要功能為製造母乳哺育嬰兒。'
     }
   },
-  mixins: [mixinMethod],
+  mixins: [mixinVideo]
 }
 </script>
-
-
-<style>
-
-</style>
