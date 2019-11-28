@@ -1,0 +1,79 @@
+html 
+  height: 100%
+  overflow-x: hidden
+body
+  width: 100%
+  height: 100%
+  -ms-overflow-style: none
+  position: fixed
+  &::-webkit-scrollbar 
+    display: none
+
+  
+  #app
+    +flexbox(none,none,row)
+    width: 100%
+    height: 100%
+    overflow-scrolling: touch
+    overflow: hidden
+    .main
+      flex: 9
+      height: 100%
+      
+    .nav
+      +flexbox(none,center,column)
+      height: 100%
+      flex: 1
+      border-left: $border
+      background-color: $colorPurple
+      padding-top: 5%
+      position: relative
+      .logo
+        position: absolute
+        bottom: 3%
+        transform: scale(.6)
+
+
+      .navbtn
+        border: $border
+        border-radius: 50%
+        width: 60%
+        height: 0
+        padding-bottom: 55%
+        position: relative
+        margin-bottom: 20%
+        background-color: $colorWhite
+
+        .navtext
+          font-size: 1.5em
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
+          font-weight: 800
+          user-select: none
+          background-color: transparent
+
+        
+        
+          
+
+.fade-enter-active, .fade-leave-active 
+  transition: all .4s
+
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+  
+
+
+.navclass
+  background-color: $colorWhite !important
+.navclass2
+  border-color: $colorWhite !important
+.navBtnclass1
+  background-color: $colorPurple !important
+  color: $colorBlack !important
+.navBtnclass
+  background-color: $colorBlack !important
+  color: $colorWhite !important

@@ -1,0 +1,21 @@
+//color
+$colorPurple: #CCAFEF
+$colorWhite: #FFFFFF
+$colorBlack: #000000
+$colorGrey: #e5e5e5
+
+//border
+$border: solid 2px black
+
+//flexbox
+@mixin flexbox($jc,$ai,$fd:row)
+    display: flex
+    justify-content: $jc
+    align-items: $ai
+    flex-direction: $fd
+
+//contentText
+@mixin contentText
+    font-size: 1em
+    letter-spacing: .1em
+    text-align: justify

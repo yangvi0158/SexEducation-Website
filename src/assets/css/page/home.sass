@@ -1,0 +1,32 @@
+.home
+  +flexbox(center,center,row)
+  width: 100%
+  height: 100% 
+  box-sizing: border-box
+  position: relative
+  padding: 9%
+  background-color: black 
+  tap-highlight-color: rgba(0,0,0,0)
+  #homeImg
+    width: auto
+    height: auto
+    
+  .changeColor
+    position: absolute
+    animation: changeColor 5s infinite linear
+    @keyframes changeColor
+      0%
+        transform: rotate(0deg)
+      100%
+        transform: rotate(-360deg)
+  img
+      max-width: 100%
+      max-height: 100%
+
+
+.backPurple
+  background-color: $colorPurple 
+.backWhite
+  background-color: $colorWhite 
+.backBlack
+  background-color: $colorBlack 
