@@ -2,7 +2,12 @@
   <div id="app">
     <div class="main">
       <transition name="fade" mode="out-in">
-        <router-view @sendtoAppVue="getfromPage" @homecolor-changenav="changeNav" :father-data="showCircle" :resetNav="navBtnColor"></router-view>
+        <router-view 
+        @sendtoAppVue="getfromPage" 
+        @homecolor-changenav="changeNav" 
+        :father-data="showCircle" 
+        :resetNav="navBtnColor"
+        ></router-view>
       </transition>
     </div>
     <nav class="nav" :class="{'whiteNavBar':navbarInMenu,'whiteBorderNavBar':navbarWhiteBorder}">

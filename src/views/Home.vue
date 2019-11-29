@@ -5,7 +5,7 @@
   'backWhite':backgroundClass.isB,
   'backBlack':backgroundClass.isC}"
   >
-    <img id="homeImg" :src="largeImgUrl">
+    <img id="homeImg" ref="homeImg" :src="largeImgUrl">
     <img class="changeColor" :src="smallImgUrl" :style="imgStyle">
   </div>
 </template>
@@ -30,16 +30,16 @@ export default {
     }
   },
   methods: {
+    //取得圈圈定位
     getDistance(event){
       this.offsetLeft = homeImg.offsetLeft;
       this.offsetTop = homeImg.offsetTop;
       this.innerLeft = homeImg.clientWidth*.695;
       this.innerTop = homeImg.clientHeight*.25;
     },
-    //首頁圈圈大小
+    //取得圈圈大小
     getscalePercent(event){
       this.scalePercent = homeImg.clientWidth*.075;
-      //console.log(this.scalePercent)
     },
     //首頁與圈圈換圖
     changeColor(){
@@ -64,19 +64,26 @@ export default {
       }
     },
   },
-  beforeMount(){
+  mounted(){
+    //圈圈位置與大小變動監聽
     this.$nextTick(function(){
-      window.addEventListener('load', this.getDistance);
       window.addEventListener('resize', this.getDistance);
-      window.addEventListener('load',this.getscalePercent);
+      window.addEventListener('load', this.getDistance);
       window.addEventListener('resize',this.getscalePercent);
+      window.addEventListener('load',this.getscalePercent);
 
       this.getDistance();
       this.getscalePercent();
     })
   },
+  beforeDestroy(){
+      // window.removeEventListener('load', this.getDistance);
+      // window.removeEventListener('resize', this.getDistance);
+      // window.removeEventListener('load',this.getscalePercent);
+      // window.removeEventListener('resize',this.getscalePercent);
+  },
   computed: {
-    //首頁圈圈定位
+    //設定圈圈位置
     imgStyle: function(){
       return {
         left: this.offsetLeft+ this.innerLeft +'px',
