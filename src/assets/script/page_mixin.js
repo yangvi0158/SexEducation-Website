@@ -1,8 +1,8 @@
 export default {
   methods:{
-    ballStyle(num){
+    Selectball(num){
       this.showCircle = 'pageItem'+num;
-      this.$emit("update-ball",this.showCircle);
+      //this.$emit("update-ball",this.showCircle);
     },
     backToHome(){
       this.$emit("sendtoAppVue");

@@ -10,6 +10,7 @@
   #homeImg
     width: auto
     height: auto
+    user-select: none
     
   .changeColor
     position: absolute
@@ -30,3 +31,14 @@
   background-color: $colorWhite 
 .backBlack
   background-color: $colorBlack 
+
+
+@media screen and (min-width: 1500px) 
+  .home
+    padding: 5%
+    #homeImg
+      max-width: 3000px
+
+@media screen and (max-width: 700px) 
+    #homeImg
+      min-width: 250px

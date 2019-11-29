@@ -8,10 +8,10 @@
     </transition>
     <div class="pagination">
       <router-link to="/organ/">
-        <div class="pagination_item"  @click="ballStyle(1)">
+        <div class="pagination_item"  @click="Selectball(1)">
           <div class="pagination_item_decoration">
             <transition name="scale">
-              <div class="circle_large" v-if="showCircle === 'pageItem1'" :key="1"></div>
+              <div class="circle_large" v-show="showCircle === 'pageItem1'" :key="1"></div>
             </transition>
             <div class="circle_small" :class="{'circle_small_Select':showCircle === 'pageItem1'}"></div>
           </div>
@@ -19,10 +19,10 @@
         </div>
       </router-link>
       <router-link to="/organ/vaginal">
-        <div class="pagination_item" @click="ballStyle(2)">
+        <div class="pagination_item" @click="Selectball(2)">
           <div class="pagination_item_decoration">
             <transition name="scale">
-              <div class="circle_large" v-if="showCircle === 'pageItem2'" :key="2"></div>
+              <div class="circle_large" v-show="showCircle === 'pageItem2'" :key="2"></div>
             </transition>
             <div class="circle_small" :class="{'circle_small_Select':showCircle === 'pageItem2'}"></div>
           </div>
@@ -30,10 +30,10 @@
         </div>
       </router-link>
       <router-link to="/organ/breasts">
-        <div class="pagination_item" @click="ballStyle(3)">
+        <div class="pagination_item" @click="Selectball(3)">
           <div class="pagination_item_decoration">
             <transition name="scale">
-              <div class="circle_large" v-if="showCircle === 'pageItem3'" :key="3"></div>
+              <div class="circle_large" v-show="showCircle === 'pageItem3'" :key="3"></div>
             </transition>
             <div class="circle_small" :class="{'circle_small_Select':showCircle === 'pageItem3'}"></div>
           </div>

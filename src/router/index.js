@@ -15,7 +15,6 @@ const routes = [
       component: () => import('@/views/udInfo.vue'),
   },
   {
-      name: 'organ', 
       path: '/organ', 
       component: () => import('@/views/organ.vue'),
       children: [
@@ -37,7 +36,6 @@ const routes = [
         ]
   },
   {
-      name: 'status',
       path: '/status',
       component: () => import('@/views/status.vue'),
       children: [
@@ -59,7 +57,6 @@ const routes = [
         ]
   },
   {
-      name: 'action',
       path: '/action', 
       component: () => import('@/views/action.vue'),
       children: [

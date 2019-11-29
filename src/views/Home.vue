@@ -1,11 +1,14 @@
 <template>
-  <div class="home" :class="{'backPurple':backgroundClass.isA,'backWhite':backgroundClass.isB,'backBlack':backgroundClass.isC}">
-    <img id="homeImg" :src="largeImgUrl" @click="changeColor">
-    <img class="changeColor" :src="smallImgUrl" :style="imgStyle" @click="changeColor">
+  <div class="home" 
+  @click="changeColor"
+  :class="{'backPurple':backgroundClass.isA,
+  'backWhite':backgroundClass.isB,
+  'backBlack':backgroundClass.isC}"
+  >
+    <img id="homeImg" :src="largeImgUrl">
+    <img class="changeColor" :src="smallImgUrl" :style="imgStyle">
   </div>
 </template>
-
-
 
 <script>
 export default {
@@ -26,17 +29,6 @@ export default {
       }
     }
   },
-  beforeMount(){
-    this.$nextTick(function(){
-      window.addEventListener('load', this.getDistance);
-      window.addEventListener('resize', this.getDistance);
-      window.addEventListener('load',this.getscalePercent);
-      window.addEventListener('resize',this.getscalePercent);
-
-      this.getDistance()
-      this.getscalePercent()
-    })
-  },
   methods: {
     getDistance(event){
       this.offsetLeft = homeImg.offsetLeft;
@@ -44,10 +36,12 @@ export default {
       this.innerLeft = homeImg.clientWidth*.695;
       this.innerTop = homeImg.clientHeight*.25;
     },
+    //首頁圈圈大小
     getscalePercent(event){
       this.scalePercent = homeImg.clientWidth*.075;
-      console.log(this.scalePercent)
+      //console.log(this.scalePercent)
     },
+    //首頁與圈圈換圖
     changeColor(){
       if(this.backgroundClass.isA === true){
         this.$emit("homecolor-changenav", '2');
@@ -70,7 +64,19 @@ export default {
       }
     },
   },
+  beforeMount(){
+    this.$nextTick(function(){
+      window.addEventListener('load', this.getDistance);
+      window.addEventListener('resize', this.getDistance);
+      window.addEventListener('load',this.getscalePercent);
+      window.addEventListener('resize',this.getscalePercent);
+
+      this.getDistance();
+      this.getscalePercent();
+    })
+  },
   computed: {
+    //首頁圈圈定位
     imgStyle: function(){
       return {
         left: this.offsetLeft+ this.innerLeft +'px',

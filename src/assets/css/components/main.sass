@@ -32,48 +32,157 @@ body
         position: absolute
         bottom: 3%
         transform: scale(.6)
-
-
-      .navbtn
-        border: $border
-        border-radius: 50%
-        width: 60%
-        height: 0
-        padding-bottom: 55%
-        position: relative
-        margin-bottom: 20%
-        background-color: $colorWhite
-
-        .navtext
-          font-size: 1.5em
-          position: absolute
-          top: 50%
-          left: 50%
-          transform: translate(-50%,-50%)
-          font-weight: 800
-          user-select: none
-          background-color: transparent
-
+        user-select: none
+      a
+        display: block
+        .navbtn
+          border: $border
+          border-radius: 50%
+          width: 50px
+          height: 50px
+          margin-bottom: 20%
+          background-color: $colorWhite
+          position: relative
+          .navtext
+            font-size: 1.5em
+            background-color: transparent
+            font-weight: 800
+            user-select: none
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
         
-        
-          
-
 .fade-enter-active, .fade-leave-active 
   transition: all .4s
-
-
 .fade-enter, .fade-leave-to
   opacity: 0
   
-
-
-.navclass
+.whiteNavBar
   background-color: $colorWhite !important
-.navclass2
+.whiteBorderNavBar
   border-color: $colorWhite !important
-.navBtnclass1
-  background-color: $colorPurple !important
-  color: $colorBlack !important
-.navBtnclass
-  background-color: $colorBlack !important
-  color: $colorWhite !important
+
+.defaultNavBtn
+  .navbtn
+    background-color: $colorPurple !important
+    .navtext
+      color: $colorBlack !important
+
+.SelectNavBtn
+  pointer-events: none !important
+  .navbtn
+    background-color: $colorBlack !important
+    .navtext
+      color: $colorWhite !important
+
+
+@media screen and (min-width: 1500px) 
+  #app
+    .main
+    .nav
+      .logo
+        bottom: 5% !important
+        transform: scale(.9) !important
+      a
+        .navbtn
+          width: 80px !important
+          height: 80px !important
+          margin-bottom: 30% !important
+          .navtext
+            font-size: 2em !important
+
+
+
+@media screen and (max-width: 700px) 
+  #app
+    +flexbox(none,none,row)
+    flex-direction: column !important
+    .main
+      flex: 9
+      height: 100%
+    .nav
+      +flexbox(center,center,column)
+      flex-direction: row !important
+      height: 50px !important
+      border-left: 0 !important
+      border-top: solid 2px black
+      padding-top: 0% !important
+      //background-color: $colorPurple
+      //height: 100%
+      //position: relative
+      .logo
+        position: absolute
+        right: 10%
+        top: 10%
+        bottom: 0% !important
+        transform: rotate(-90deg) scale(.4) !important
+        display: none
+        //user-select: none
+      a
+        margin: 5% 10% 5% 0 !important
+        //display: block
+        &:nth-of-type(3)
+          margin-right: 0 !important
+        .navbtn
+          border: solid 2px black !important
+          margin-bottom: 0% !important
+          //border: $border
+          //border-radius: 50%
+          //width: 50px
+          //height: 50px
+          //background-color: $colorWhite
+          //position: relative
+          .navtext
+            font-weight: 500 !important
+            //font-size: 1.5em
+            //background-color: transparent
+            //user-select: none
+            //position: absolute
+            //top: 50%
+            //left: 50%
+            //transform: translate(-50%,-50%)
+
+@media screen and (max-width: 500px) 
+  #app
+    //+flexbox(none,none,row)
+    //flex-direction: column !important
+    .main
+      //flex: 9
+      //height: 100%
+    .nav
+      // +flexbox(center,center,column)
+      // flex-direction: row !important
+      // height: 50px !important
+      // border-left: 0 !important
+      border-top: solid 1px black !important
+      // padding-top: 0% !important
+      //background-color: $colorPurple
+      //height: 100%
+      //position: relative
+      .logo
+        //display: none
+        //user-select: none
+      a
+        margin: 5% 10% 5% 0 !important
+        //display: block
+        &:nth-of-type(3)
+          margin-right: 0 !important
+        .navbtn
+          border: solid 1px black !important
+          margin-bottom: 0% !important
+          //border: $border
+          //border-radius: 50%
+          width: 40px !important
+          height: 40px !important
+          //background-color: $colorWhite
+          //position: relative
+          .navtext
+            font-weight: 500
+            font-size: 1.2em !important
+            //background-color: transparent
+            //user-select: none
+            //position: absolute
+            //top: 50%
+            //left: 50%
+            //transform: translate(-50%,-50%)
