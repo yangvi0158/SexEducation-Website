@@ -1,6 +1,6 @@
 # 👩🏻‍❤️‍👩🏼 Sex Education Website 
 
-### See the [Website](https://viboloveyou12.github.io/SexEducation-Website/#/) 👈👈 
+### See the [Website](https://viboloveyou12.github.io/SexEducation-Website/#/) ✨✨
 
 ![chrome-capture-2023-6-17](https://github.com/viboloveyou12/SexEducation-Website/assets/29854567/2783bcc1-4b05-4349-9306-bce2032b4712)
 
